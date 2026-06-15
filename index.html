@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Soste Camper Italia</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f7fb;
+    color:#333;
+}
+
+header{
+    background:linear-gradient(135deg,#0f4c75,#3282b8);
+    color:white;
+    padding:30px 20px;
+    text-align:center;
+    box-shadow:0 3px 10px rgba(0,0,0,0.2);
+}
+
+header h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:18px;
+    opacity:0.9;
+}
+
+.container{
+    width:95%;
+    max-width:1400px;
+    margin:auto;
+    padding:30px 0;
+}
+
+.search-box{
+    margin-bottom:25px;
+    text-align:center;
+}
+
+.search-box input{
+    width:100%;
+    max-width:500px;
+    padding:14px;
+    border-radius:12px;
+    border:1px solid #ccc;
+    font-size:18px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+.table-container{
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+thead{
+    background:#0f4c75;
+    color:white;
+}
+
+th, td{
+    padding:16px;
+    text-align:left;
+    border-bottom:1px solid #ddd;
+    vertical-align:top;
+}
+
+tr:hover{
+    background:#f1f8ff;
+}
+
+.region{
+    font-weight:bold;
+    color:#0f4c75;
+}
+
+.note{
+    color:#666;
+    font-size:14px;
+}
+
+a{
+    color:#0077cc;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+.badge{
+    display:inline-block;
+    background:#28a745;
+    color:white;
+    padding:4px 10px;
+    border-radius:20px;
+    font-size:12px;
+    margin-top:5px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#666;
+}
+
+@media(max-width:768px){
+
+    header h1{
+        font-size:30px;
+    }
+
+    th, td{
+        padding:12px;
+        font-size:14px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🚐 Soste Camper Italia</h1>
+    <p>Aree sosta, campeggi e punti utili per viaggi in camper</p>
+</header>
+
+<div class="container">
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="🔍 Cerca regione, località o note...">
+    </div>
+
+    <div class="table-container">
+
+        <table id="camperTable">
+
+            <thead>
+                <tr>
+                    <th>Regione</th>
+                    <th>Luogo / Area Sosta</th>
+                    <th>Link</th>
+                    <th>Note</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td class="region">PIEMONTE</td>
+                    <td>Langhe</td>
+                    <td>
+                        <a href="https://www.camperonline.it/viaggi-in-camper/langhe-e-dintorni_6826" target="_blank">Apri</a>
+                    </td>
+                    <td>Viaggio nelle Langhe</td>
+                </tr>
+
+                <tr>
+                    <td class="region">PIEMONTE</td>
+                    <td>Farigliano - Agriturismo Pianbosco</td>
+                    <td>
+                        <a href="https://www.camperonline.it/sosta-camper/aree-di-sosta/italia/piemonte/agriturismo-pianbosco/9945" target="_blank">Apri</a>
+                    </td>
+                    <td>
+                        Senza servizi<br>
+                        Ristorante<br>
+                        <span class="badge">Sosta Gratis</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="region">PIEMONTE</td>
+                    <td>Oasi Zegna</td>
+                    <td>
+                        <a href="https://www.oasizegna.com/it/oasi-verde/camper-oasi-zegna-vacanze_8897.html" target="_blank">Apri</a>
+                    </td>
+                    <td>Area naturalistica</td>
+                </tr>
+
+                <tr>
+                    <td class="region">LIGURIA</td>
+                    <td>Finale Ligure</td>
+                    <td>
+                        <a href="https://maps.app.goo.gl/JDpWneFMFttRqid19" target="_blank">Google Maps</a>
+                    </td>
+                    <td>Area sosta camper</td>
+                </tr>
+
+                <tr>
+                    <td class="region">LIGURIA</td>
+                    <td>Santo Stefano al Mare</td>
+                    <td>
+                        <a href="https://maps.app.goo.gl/2KujcE44w4Csjxvm7" target="_blank">Google Maps</a>
+                    </td>
+                    <td>
+                        Fronte mare<br>
+                        No servizi
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="region">LIGURIA</td>
+                    <td>Parking Merello - Spotorno</td>
+                    <td>
+                        <a href="https://maps.app.goo.gl/KXcGZTnTi9UDqhwX7" target="_blank">Google Maps</a>
+                    </td>
+                    <td>No corrente</td>
+                </tr>
+
+                <tr>
+                    <td class="region">TOSCANA</td>
+                    <td>Santa Fiora (GR)</td>
+                    <td>
+                        <a href="https://maps.app.goo.gl/i9sgx3QTnRDe6sir5" target="_blank">Google Maps</a>
+                    </td>
+                    <td>Area sosta camper</td>
+                </tr>
+
+                <tr>
+                    <td class="region">TOSCANA</td>
+                    <td>L'Orticillo - Riotorto</td>
+                    <td>
+                        <a href="https://maps.app.goo.gl/gGkaMArsGjMyZLk27" target="_blank">Google Maps</a>
+                    </td>
+                    <td>Aperto in inverno</td>
+                </tr>
+
+                <tr>
+                    <td class="region">TOSCANA</td>
+                    <td>Vallombrosa (FI)</td>
+                    <td>
+                        <a href="https://maps.app.goo.gl/gP5D6NzbTh1zYRho8" target="_blank">Google Maps</a>
+                    </td>
+                    <td>Area sosta camper</td>
+                </tr>
+
+                <tr>
+                    <td class="region">ABRUZZO</td>
+                    <td>Ortucchio (AQ)</td>
+                    <td>
+                        <a href="https://maps.app.goo.gl/xB5HojRzNqULvnNW9" target="_blank">Google Maps</a>
+                    </td>
+                    <td>
+                        <span class="badge">GRATUITA</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="region">MARCHE</td>
+                    <td>Cingoli (AN)</td>
+                    <td>
+                        <a href="#" target="_blank">Info</a>
+                    </td>
+                    <td>
+                        Azienda agricola<br>
+                        Corrente elettrica<br>
+                        Carico/scarico
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="region">CALABRIA</td>
+                    <td>Agricampeggio Valle Lao</td>
+                    <td>
+                        <a href="https://maps.app.goo.gl/Ymr2LKdhU3tRThpVA" target="_blank">Google Maps</a>
+                    </td>
+                    <td>Area camper</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<footer>
+    🚐 Archivio personale soste camper Italia
+</footer>
+
+<script>
+
+const searchInput = document.getElementById("searchInput");
+const table = document.getElementById("camperTable");
+const rows = table.getElementsByTagName("tr");
+
+searchInput.addEventListener("keyup", function() {
+
+    const filter = searchInput.value.toLowerCase();
+
+    for(let i = 1; i < rows.length; i++) {
+
+        let text = rows[i].textContent.toLowerCase();
+
+        if(text.includes(filter)) {
+            rows[i].style.display = "";
+        } else {
+            rows[i].style.display = "none";
+        }
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
